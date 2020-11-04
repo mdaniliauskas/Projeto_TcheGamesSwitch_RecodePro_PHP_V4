@@ -18,7 +18,8 @@
         $quantidade = $_POST['quantidade'];
 
         $sql = "insert into pedidos (nomeClientes, telefone, endereco, nomeProduto, quantidade) values ('$nomeClientes', '$telefone', '$endereco', '$nomeProduto', '$quantidade')";
-        $result = $conn->query($sql);                
+        $result = $conn->query($sql);  
+        mysqli_close($conn);              
 }
 ?>
 
@@ -55,7 +56,7 @@
     <strong>Endereço:</strong> <em>$endereco</em><br><br>
     <strong>Produto:</strong> <em>$nomeProduto</em><br><br>
     <strong>Quantidade:</strong> <em>$quantidade</em><br><br>
-    ";
+    ";    
     ?>
 
     <br><br>

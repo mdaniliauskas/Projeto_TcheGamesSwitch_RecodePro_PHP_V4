@@ -16,8 +16,10 @@
                     $mensagem = $_POST['mensagem'];
                     
                     $sql = "insert into comentarios (nome, email, mensagem) values ('$nome', '$email', '$mensagem')";
-                    $result = $conn->query($sql);
+                    $result = $conn->query($sql);                    
                 }
+                
+                mysqli_close($conn); 
 
 ?>
 
